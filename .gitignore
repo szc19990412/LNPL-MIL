@@ -1,0 +1,62 @@
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# IDEs and editors
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+*.komodoproject
+*.komodo_workspace
+*.kate-swp
+
+# Programming languages and frameworks
+*.log
+logs/
+node_modules/
+bower_components/
+*.pid
+*.lock
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+dist/
+build/
+
+# Compiled source
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Packages
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.egg-info/
+*.egg
+
+# Miscellaneous
+*.cache
+*.css.map
+*.pyc
+*.sqlite3
+.cypress/
+.history
+coverage/

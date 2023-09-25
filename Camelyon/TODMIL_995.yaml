@@ -1,0 +1,58 @@
+General:
+    comment: 
+    seed: 2021
+    fp16: True
+    amp_level: O2
+    precision: 16 
+    multi_gpu_mode: dp
+    gpus: [0]
+    epochs: &epoch 200 
+    grad_acc: 2
+    frozen_bn: False
+    patience: 10
+    server: test #train #test
+    log_path: logs/
+    ratio: 0.001
+
+Data:
+    dataset_name: camel_data
+    data_shuffle: False
+    data_dir: ../Camelyon16/pt_files_995/
+    label_dir: dataset_csv/camelyon16/
+    fold: 0
+    nfold: 4
+    topk: 200
+
+    train_dataloader:
+        batch_size: 1 
+        num_workers: 8
+
+    test_dataloader:
+        batch_size: 1
+        num_workers: 8
+
+Model:
+    name: TODMIL
+    num_layers: 4
+    dim: 256
+    num_heads: 8
+    ff_dim: 1024
+    dropout: 0.0
+    input_feature: 512
+    n_classes: 2
+    num_patches: 200
+    expansion_factor: 2.0
+    expansion_factor_token: 0.5
+
+
+Optimizer:
+    opt: lookahead_radam
+    lr: 0.0002
+    opt_eps: null 
+    opt_betas: null
+    momentum: null 
+    weight_decay: 0.00001
+
+Loss:
+    base_loss: CrossEntropyLoss
+
